@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4128ec88-8255-4aea-ae45-34df7778053b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\vector">
+      <UniqueIdentifier>{2cb9b1ec-f760-47bd-86b2-996b6d5738ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\common">
+      <UniqueIdentifier>{b8bd2e8b-2c78-4ad8-a5a0-e440774ba2f2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common.h">
+      <Filter>src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="namespaces.h">
+      <Filter>src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="helpers.h">
+      <Filter>src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="vec.h">
+      <Filter>src\vector</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="main.cu" />
+  </ItemGroup>
+</Project>

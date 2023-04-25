@@ -30,3 +30,4 @@
 *.exe
 *.out
 *.app
+cuda_nn_lib/.vs/cuda_nn_lib/v17/Browse.VC.opendb
