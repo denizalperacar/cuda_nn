@@ -21,7 +21,7 @@ struct VECTOR_ATTR vec {
 
 	template <typename U, uint32_t D>
 	CNNL_HOST_DEVICE vec(const vec<U, D>& obj) {
-		CNNL_PRAGMA_UNROLL
+	CNNL_PRAGMA_UNROLL
 		for (uint32_t i = 0; i < min(D, DIM); i++) {
 			data[i] = (T)obj[i];
 		}
@@ -51,6 +51,16 @@ struct VECTOR_ATTR vec {
 	static constexpr uint32_t N = DIM;
 };
 
+// [TODO] add vector operations
+template <typename T, uint32_t DIM>
+inline CNNL_HOST_DEVICE vec<T, DIM> operator-(vec<T, DIM> v) {
+	CNNL_PRAGMA_UNROLL
+	vec<T, DIM> res;
+	for (uint32_t i = 0; i < v.size(); i++) {
+		res[i] = -v[i];
+	}
+	return res;
+}
 
 
 
